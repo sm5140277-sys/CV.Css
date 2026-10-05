@@ -1,0 +1,407 @@
+<DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Junior Frontend Developer Resume</title>
+      <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          margin: 0;
+          padding: 30px 20px;
+          font-family:
+            "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          background: linear-gradient(135deg, #eef6ff, #f7f7f7 40%, #edf9f3);
+          color: #2d3748;
+          letter-spacing: 0.1px;
+          line-height: 1.6;
+        }
+
+        .resume-container {
+          max-width: 900px;
+          margin: 0 auto;
+          background: #ffffff;
+          border-radius: 18px;
+          box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+          overflow: hidden;
+        }
+
+        .resume-header {
+          background: linear-gradient(135deg, #1e3a5f, #2b5b8f 45%, #4b9cd3);
+          color: #ffffff;
+          padding: 32px 38px 25px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .header-text {
+          flex: 1;
+        }
+
+        .eyebrow {
+          margin: 0 0 5px;
+          font-size: 12px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          opacity: 0.8;
+        }
+
+        .resume-header h1 {
+          margin: 0;
+          font-size: 2.2rem;
+          letter-spacing: 1px;
+          font-weight: 700;
+        }
+
+        .summary {
+          margin: 12px 0 0;
+          font-size: 14px;
+          line-height: 1.8;
+          max-width: 580px;
+          color: rgba(255, 255, 255, 0.9);
+          font-style: italic;
+        }
+
+        .profile-badge {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.15);
+          border: 3px solid rgba(255, 255, 255, 0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.2rem;
+          font-weight: 700;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+          overflow: hidden;
+          flex-shrink: 0;
+          padding: 0;
+        }
+
+        .profile-badge img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 18%;
+          display: block;
+          transform: scale(1.04);
+        }
+
+        main {
+          padding: 28px 38px 38px;
+        }
+
+        .info-grid {
+          display: grid;
+          grid-template-columns: 1.1fr 0.9fr;
+          gap: 22px;
+          margin-bottom: 20px;
+        }
+
+        .card {
+          background: #f8fafc;
+          border: 1px solid #e5edf5;
+          border-radius: 14px;
+          padding: 20px 22px;
+        }
+
+        h2 {
+          margin: 0 0 14px;
+          padding-bottom: 8px;
+          border-bottom: 2px solid #5aa6df;
+          color: #1f3b5b;
+          text-transform: uppercase;
+          font-size: 15px;
+          letter-spacing: 1px;
+          font-weight: 700;
+        }
+
+        .info-list,
+        .contact-list,
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .info-list li,
+        .contact-list li {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+          padding: 7px 0;
+          border-bottom: 1px solid #edf2f7;
+          font-size: 14px;
+        }
+
+        .info-list li:last-child,
+        .contact-list li:last-child {
+          border-bottom: none;
+        }
+
+        .info-list strong,
+        .contact-list strong {
+          color: #1e2d3d;
+        }
+
+        .contact-list li {
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .contact-list a {
+          color: #2b7ec9;
+          text-decoration: none;
+        }
+
+        section {
+          margin-top: 24px;
+        }
+
+        .section-block {
+          background: #ffffff;
+          border: 1px solid #e9eff6;
+          border-radius: 14px;
+          padding: 20px 22px;
+          margin-bottom: 18px;
+        }
+
+        .project-item {
+          margin-bottom: 18px;
+        }
+
+        .project-item:last-child {
+          margin-bottom: 0;
+        }
+
+        h3 {
+          margin: 0 0 8px;
+          color: #2f4d68;
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        .role {
+          font-weight: 600;
+          color: #2b6cb0;
+        }
+
+        p {
+          margin: 6px 0;
+          line-height: 1.75;
+          font-size: 14px;
+        }
+
+        ul {
+          margin-top: 10px;
+          padding-left: 18px;
+        }
+
+        li {
+          font-size: 14px;
+          line-height: 1.75;
+          margin-bottom: 6px;
+        }
+
+        .language-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px 20px;
+          padding-left: 0;
+          list-style: none;
+        }
+
+        .language-list li {
+          background: #eef7ff;
+          border: 1px solid #cfe5ff;
+          border-radius: 999px;
+          padding: 7px 12px;
+          font-weight: 600;
+          color: #2e5d8a;
+          margin: 0;
+        }
+
+        @media (max-width: 700px) {
+          body {
+            padding: 15px 12px;
+          }
+
+          .resume-header {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .info-grid {
+            grid-template-columns: 1fr;
+          }
+
+          main {
+            padding: 20px 18px 26px;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="resume-container">
+        <header class="resume-header">
+          <div class="header-text">
+            <p class="eyebrow">Student / aspiring frontend developer</p>
+            <h1>Samai Khnob</h1>
+            <p class="summary">
+              "A third-year Information Technology (IT) student with a strong
+              interest in web development, experience in customer service, and a
+              high readiness to learn new skills."
+            </p>
+          </div>
+          <div class="profile-badge">
+            <img src="MyPic.jpg" alt="Profile photo of Samai Khnob" />
+          </div>
+        </header>
+
+        <main>
+          <div class="info-grid">
+            <div class="card">
+              <h2>Professional Summary</h2>
+              <ul class="info-list">
+                <li><strong>Name:</strong><span>Samai Khnob</span></li>
+                <li><strong>Age:</strong><span>19 year</span></li>
+                <li><strong>Gender:</strong><span>Female</span></li>
+                <li><strong>Nationality:</strong><span>Cambodian</span></li>
+                <li>
+                  <strong>Birth Place:</strong
+                  ><span>Angkor Chum District, Siem Reap Province</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h2>Contact</h2>
+              <ul class="contact-list">
+                <li>
+                  <strong>Address:</strong
+                  ><span>Street 2002, Tuek Thla, Phnom Penh</span>
+                </li>
+                <li>
+                  <strong>Phone:</strong
+                  ><span
+                    ><a href="tel:+885979122623">(+885) 979-122-623</a></span
+                  >
+                </li>
+                <li>
+                  <strong>Email:</strong
+                  ><span
+                    ><a href="mailto:khnobsamai55@gmail.com"
+                      >khnobsamai55@gmail.com</a
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <section>
+            <div class="section-block">
+              <h2>Skills</h2>
+              <p>
+                <strong>Technical:</strong> HTML, CSS, Java, Database System,
+                SQL
+              </p>
+              <p>
+                <strong>Soft Skills:</strong> Customer Service, Teamwork, Time
+                Management
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-block">
+              <h2>Languages</h2>
+              <ul class="language-list">
+                <li>Khmer: 100%</li>
+                <li>English: 70%</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-block">
+              <h2>Education</h2>
+              <h3>Bachelor of Science in Information Technology (Year 3)</h3>
+              <p>
+                Royal University of Phnom Penh, St. Russian Federation
+                Boulevard, Toul Kork, Phnom Penh
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-block">
+              <h2>Experience</h2>
+              <h3>Cashier / Customer Service</h3>
+              <p class="role">Lucky Supermarket Midtown</p>
+              <p>
+                Corner of Street 2004 and Street 13B, Phum Trapeang Chhouk,
+                Phnom Penh
+              </p>
+              <p><strong>Duration:</strong> 5 Months</p>
+              <ul>
+                <li>
+                  Provided excellent customer service and handled cashier
+                  operations efficiently for daily shoppers.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-block">
+              <h2>Projects</h2>
+
+              <div class="project-item">
+                <h3>
+                  University Management System Database (Academic Project)
+                </h3>
+                <p>
+                  <strong>Technologies:</strong> SQL, Database Design, Report
+                  (DML, DDL, TCL, DCL)
+                </p>
+                <ul>
+                  <li>
+                    Designed and normalized a relational database system for
+                    university management, including students, courses, and
+                    enrollments.
+                  </li>
+                  <li>
+                    Created ER diagrams, data dictionaries, and implemented SQL
+                    queries for data management.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="project-item">
+                <h3>Personal Portfolio Website</h3>
+                <p><strong>Technologies:</strong> HTML, CSS</p>
+                <ul>
+                  <li>
+                    Built a responsive personal portfolio website to showcase
+                    academic background, skills, and projects.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </body>
+  </html>
+</DOCTYPE>
